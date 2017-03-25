@@ -19,8 +19,6 @@ import java.awt.event.ActionEvent;
 
 public class Aplicacion {
 	
-	//probando
-	
 	private JFrame frame;
 
 	/**
