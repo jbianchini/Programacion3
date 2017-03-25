@@ -55,34 +55,11 @@ public class Aplicacion {
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		int[] posicionesX = new int[9];
-		
-		int cont = 0;
-		for(int i=0;i<posicionesX.length;i++){
-			posicionesX[i] = cont;
-			cont++;
-			if(cont>2){
-				cont = 0;
-			}
-		}
-		
-		int[] posicionesY = new int[9];
-		
-		cont = 0;
-		int cont2 = 0;
-		for(int i=0;i<posicionesY.length;i++){
-			if(cont2>2){
-				cont++;
-				cont2 = 0;
-			}
-			posicionesY[i] = cont;
-			cont2++;
-		}
-		
-		
+		Point[] posiciones = Ordenamiento.posicionar(9,3);
+	
 		
 		Button button = new Button("");
-		button.setBounds(0, 0, 50, 50);
+		button.setBounds((int) posiciones[0].getX(), (int) posiciones[0].getY(), 50, 50);
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			}
@@ -91,7 +68,7 @@ public class Aplicacion {
 		frame.getContentPane().add(button);
 		
 		Button button_1 = new Button("1");
-		button_1.setBounds(50, 0, 50, 50);
+		button_1.setBounds((int) posiciones[1].getX(), (int) posiciones[1].getY(), 50, 50);
 		button_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -102,7 +79,7 @@ public class Aplicacion {
 		frame.getContentPane().add(button_1);
 		
 		Button button_2 = new Button("2");
-		button_2.setBounds(100, 0, 50, 50);
+		button_2.setBounds((int) posiciones[2].getX(), (int) posiciones[2].getY(), 50, 50);
 		button_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -113,7 +90,7 @@ public class Aplicacion {
 		frame.getContentPane().add(button_2);
 		
 		Button button_3 = new Button("3");
-		button_3.setBounds(0, 50, 50, 50);
+		button_3.setBounds((int) posiciones[3].getX(), (int) posiciones[3].getY(), 50, 50);
 		button_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -124,7 +101,7 @@ public class Aplicacion {
 		frame.getContentPane().add(button_3);
 		
 		Button button_4 = new Button("4");
-		button_4.setBounds(50, 50, 50, 50);
+		button_4.setBounds((int) posiciones[4].getX(), (int) posiciones[4].getY(), 50, 50);
 		button_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -135,7 +112,7 @@ public class Aplicacion {
 		frame.getContentPane().add(button_4);
 		
 		Button button_5 = new Button("5");
-		button_5.setBounds(100, 50, 50, 50);
+		button_5.setBounds((int) posiciones[5].getX(), (int) posiciones[5].getY(), 50, 50);
 		button_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -146,7 +123,7 @@ public class Aplicacion {
 		frame.getContentPane().add(button_5);
 		
 		Button button_6 = new Button("6");
-		button_6.setBounds(0, 100, 50, 50);
+		button_6.setBounds((int) posiciones[6].getX(), (int) posiciones[6].getY(), 50, 50);
 		button_6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -157,7 +134,7 @@ public class Aplicacion {
 		frame.getContentPane().add(button_6);
 		
 		Button button_7 = new Button("7");
-		button_7.setBounds(50, 100, 50, 50);
+		button_7.setBounds((int) posiciones[7].getX(), (int) posiciones[7].getY(), 50, 50);
 		button_7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -168,7 +145,7 @@ public class Aplicacion {
 		frame.getContentPane().add(button_7);
 		
 		Button button_8 = new Button("8");
-		button_8.setBounds(100, 100, 50, 50);
+		button_8.setBounds((int) posiciones[8].getX(), (int) posiciones[8].getY(), 50, 50);
 		button_8.setActionCommand("8");
 		button_8.addActionListener(new ActionListener() {
 			
