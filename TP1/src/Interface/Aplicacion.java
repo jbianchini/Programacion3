@@ -55,7 +55,9 @@ public class Aplicacion {
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		Point[] posiciones = Ordenamiento.posicionar(9,3);
+		
+		//Asigna las posiciones de los cuadros en base a la dimension de la tabla
+		Point[] posiciones = Ordenamiento.posicionar(3);//3x3
 	
 		
 		Button button = new Button("");

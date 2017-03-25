@@ -18,6 +18,8 @@ public class Ordenamiento {
 	
 	
 	public static void presionar(Button b1, Button b2) {
+		
+		//Toma como parametro de distancia el ancho del primer boton
 		if(Ordenamiento.estaCerca(b1.getLocation(), b2.getLocation() ,b1.getHeight())){
 		
 			Point aux = b2.getLocation();
@@ -67,25 +69,9 @@ public class Ordenamiento {
 		
 	}
 	
-	public static void main(String[] args) {
+	public static Point[] posicionar(int dim) {
 		
-		int[] pos = new int[1];
-		
-		for(int i=0;i<pos.length;i++){
-			
-			pos[i] = i;
-		}
-		
-		pos = desordenar(pos);
-		
-		for(int i=0;i<pos.length;i++){
-			
-			System.out.println(pos[i]);
-		}
-		
-	}
-	
-	public static Point[] posicionar(int tam, int interv) {
+		int tam = dim*dim;
 		
 		Point[] posiciones = new Point[tam];
 		
@@ -111,7 +97,7 @@ public class Ordenamiento {
 						
 			cont++;
 			
-			if(cont>interv-1){
+			if(cont>dim-1){
 				
 				y += 50;
 				x = 0;
